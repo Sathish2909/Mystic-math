@@ -1,4 +1,4 @@
-// Scene Setup
+
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer({ alpha: true });
@@ -13,13 +13,13 @@ light.position.set(10, 10, 10);
 scene.add(light);
 scene.add(new THREE.AmbientLight(0x404040));
 
-// Math-Themed Object
+
 const geometry = new THREE.TorusKnotGeometry(1, 0.3, 128, 32);
 const material = new THREE.MeshStandardMaterial({ color: 0xff6347, metalness: 0.6, roughness: 0.3 });
 const knot = new THREE.Mesh(geometry, material);
 scene.add(knot);
 
-// Starfield
+
 function createStars(count) {
   const geometry = new THREE.BufferGeometry();
   const vertices = [];
